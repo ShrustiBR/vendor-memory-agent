@@ -1,0 +1,77 @@
+[
+  {
+    "step": 1,
+    "title": "QuickCart sends a price spike",
+    "supplier_id": "SUP-001",
+    "raw_text": "Hi sir, QuickCart this side. New rate for 5-ply 12x10x8 corrugated box Rs 19.43 per pc for 3000 pcs. Valid till 18 Nov. Delivery in 7 days. Pls confirm. - Ramesh",
+    "quote": {
+      "quote_id": "QT-DEMO-1",
+      "supplier_id": "SUP-001",
+      "item": "Corrugated Box 12x10x8 (5-ply, 150 GSM)",
+      "quantity": 3000,
+      "unit_price": 19.43,
+      "quote_date": "2026-11-03",
+      "valid_until": "2026-11-18"
+    }
+  },
+  {
+    "step": 2,
+    "title": "VolumeMax quote for a bigger lot",
+    "supplier_id": "SUP-003",
+    "raw_text": "Dear Sir, VolumeMax Traders quotation: 12x10x8 5-ply box @ Rs 19.84/pc, qty 5000. Payment 30 days. Valid 15 days. Regards, Sales Desk",
+    "quote": {
+      "quote_id": "QT-DEMO-2",
+      "supplier_id": "SUP-003",
+      "item": "Corrugated Box 12x10x8 (5-ply, 150 GSM)",
+      "quantity": 5000,
+      "unit_price": 19.84,
+      "quote_date": "2026-11-04",
+      "valid_until": "2026-11-19"
+    }
+  },
+  {
+    "step": 3,
+    "title": "Deccan raises prices again",
+    "supplier_id": "SUP-004",
+    "raw_text": "Hello, Deccan Wholesale here. Revised price for 12x10x8 5-ply box is Rs 25.94 per piece for 3000 pcs due to kraft paper cost. Kindly confirm by Friday.",
+    "quote": {
+      "quote_id": "QT-DEMO-3",
+      "supplier_id": "SUP-004",
+      "item": "Corrugated Box 12x10x8 (5-ply, 150 GSM)",
+      "quantity": 3000,
+      "unit_price": 25.94,
+      "quote_date": "2026-11-04",
+      "valid_until": "2026-11-19"
+    }
+  },
+  {
+    "step": 4,
+    "title": "Prime Industrial routine quote",
+    "supplier_id": "SUP-002",
+    "raw_text": "Prime Industrial Co. Quotation: Corrugated box 12x10x8, 5 ply 150 GSM. Rate Rs 22.12/pc. Qty 3000 pcs. Validity 15 days. Delivery 7-10 days.",
+    "quote": {
+      "quote_id": "QT-DEMO-4",
+      "supplier_id": "SUP-002",
+      "item": "Corrugated Box 12x10x8 (5-ply, 150 GSM)",
+      "quantity": 3000,
+      "unit_price": 22.12,
+      "quote_date": "2026-11-05",
+      "valid_until": "2026-11-20"
+    }
+  },
+  {
+    "step": 5,
+    "title": "QuickCart follow-up quote (after logging the outcome)",
+    "supplier_id": "SUP-001",
+    "raw_text": "Sir QuickCart again. Okay we can do box 12x10x8 at Rs 18.39 for 3000 pcs. This is our best. Dispatch in 7 days.",
+    "quote": {
+      "quote_id": "QT-DEMO-5",
+      "supplier_id": "SUP-001",
+      "item": "Corrugated Box 12x10x8 (5-ply, 150 GSM)",
+      "quantity": 3000,
+      "unit_price": 18.39,
+      "quote_date": "2026-11-06",
+      "valid_until": "2026-11-21"
+    }
+  }
+]

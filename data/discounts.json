@@ -1,0 +1,92 @@
+[
+  {
+    "supplier_id": "SUP-001",
+    "percent": 3.0,
+    "reason": "delivery penalty clause accepted",
+    "discount_date": "2025-12-07"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "percent": 2.0,
+    "reason": "matched competing quote",
+    "discount_date": "2026-02-08"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "percent": 3.5,
+    "reason": "delivery penalty clause accepted",
+    "discount_date": "2026-05-09"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "percent": 4.0,
+    "reason": "delivery penalty clause plus volume-shift warning",
+    "discount_date": "2026-09-02"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "percent": 5.0,
+    "reason": "12-month contract commitment",
+    "discount_date": "2025-12-10"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "percent": 6.0,
+    "reason": "18-month contract extension",
+    "discount_date": "2026-06-05"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "percent": 7.0,
+    "reason": "volume commitment of 5000 units",
+    "discount_date": "2025-12-06"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "percent": 8.5,
+    "reason": "volume commitment of 6000 units",
+    "discount_date": "2026-03-08"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "percent": 3.0,
+    "reason": "matched competing quote",
+    "discount_date": "2026-05-08"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "percent": 9.0,
+    "reason": "volume commitment of 8000 units",
+    "discount_date": "2026-07-06"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "percent": 10.0,
+    "reason": "volume commitment of 10000 units",
+    "discount_date": "2026-09-03"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "percent": 3.0,
+    "reason": "early payment within 5 days",
+    "discount_date": "2025-12-10"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "percent": 4.0,
+    "reason": "early payment (100% advance)",
+    "discount_date": "2026-04-07"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "percent": 5.0,
+    "reason": "early payment (50% advance)",
+    "discount_date": "2026-08-07"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "percent": 1.5,
+    "reason": "annual loyalty rebate on contract anniversary",
+    "discount_date": "2026-06-10"
+  }
+]

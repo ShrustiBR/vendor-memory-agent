@@ -1,0 +1,26 @@
+[
+  {
+    "supplier_id": "SUP-001",
+    "name": "QuickCart Supplies",
+    "category": "Packaging",
+    "personality": "cheap but often late"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "name": "Prime Industrial Co",
+    "category": "Packaging",
+    "personality": "expensive but very dependable"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "name": "VolumeMax Traders",
+    "category": "Packaging",
+    "personality": "gives big discounts for volume commitments"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "name": "Deccan Wholesale",
+    "category": "Packaging",
+    "personality": "raises prices often, flexible on early payment"
+  }
+]

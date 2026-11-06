@@ -1,0 +1,222 @@
+[
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2025-12-07",
+    "quote_id": "QT-001-02",
+    "tactic_used": "delivery_penalty_clause",
+    "worked": true,
+    "original_price": 32.67,
+    "final_price": 31.69,
+    "notes": "Agreed 1% credit per day of delay beyond day 2"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2026-02-08",
+    "quote_id": "QT-001-04",
+    "tactic_used": "competing_quote",
+    "worked": true,
+    "original_price": 363.1,
+    "final_price": 355.84,
+    "notes": "Showed Prime Industrial quote; matched 2% lower after two calls"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2026-03-06",
+    "quote_id": "QT-001-05",
+    "tactic_used": "volume_commitment",
+    "worked": false,
+    "original_price": 16.99,
+    "final_price": 16.99,
+    "notes": "Refused; said margins too thin for volume discounts"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2026-05-09",
+    "quote_id": "QT-001-07",
+    "tactic_used": "delivery_penalty_clause",
+    "worked": true,
+    "original_price": 17.21,
+    "final_price": 16.61,
+    "notes": "Penalty clause accepted again, priority dispatch promised"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2026-07-05",
+    "quote_id": "QT-001-09",
+    "tactic_used": "early_payment",
+    "worked": false,
+    "original_price": 17.46,
+    "final_price": 17.46,
+    "notes": "Declined early-payment discount; prefers advance payment"
+  },
+  {
+    "supplier_id": "SUP-001",
+    "negotiation_date": "2026-09-02",
+    "quote_id": "QT-001-11",
+    "tactic_used": "delivery_penalty_clause",
+    "worked": true,
+    "original_price": 17.35,
+    "final_price": 16.66,
+    "notes": "Penalty clause plus hint of shifting 30% volume to Prime"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "negotiation_date": "2025-12-10",
+    "quote_id": "QT-002-02",
+    "tactic_used": "long_term_contract",
+    "worked": true,
+    "original_price": 40.47,
+    "final_price": 38.45,
+    "notes": "Signed 12-month rate card at 5% below list"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "negotiation_date": "2026-02-08",
+    "quote_id": "QT-002-04",
+    "tactic_used": "competing_quote",
+    "worked": false,
+    "original_price": 448.39,
+    "final_price": 448.39,
+    "notes": "Did not budge; said quality justifies the premium"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "negotiation_date": "2026-04-05",
+    "quote_id": "QT-002-06",
+    "tactic_used": "volume_commitment",
+    "worked": false,
+    "original_price": 4.88,
+    "final_price": 4.88,
+    "notes": "Volume alone not enough; wants an annual contract"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "negotiation_date": "2026-06-05",
+    "quote_id": "QT-002-08",
+    "tactic_used": "long_term_contract",
+    "worked": true,
+    "original_price": 41.7,
+    "final_price": 39.2,
+    "notes": "Extended to 18 months for 6% off and price held for 6 months"
+  },
+  {
+    "supplier_id": "SUP-002",
+    "negotiation_date": "2026-08-07",
+    "quote_id": "QT-002-10",
+    "tactic_used": "early_payment",
+    "worked": false,
+    "original_price": 492.03,
+    "final_price": 492.03,
+    "notes": "Offered only 0.5%, not worth the cash tie-up"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2025-12-06",
+    "quote_id": "QT-003-02",
+    "tactic_used": "volume_commitment",
+    "worked": true,
+    "original_price": 35.91,
+    "final_price": 33.4,
+    "notes": "Committed 5000 units per quarter; 7% off"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2026-01-07",
+    "quote_id": "QT-003-03",
+    "tactic_used": "early_payment",
+    "worked": false,
+    "original_price": 18.6,
+    "final_price": 18.6,
+    "notes": "Said volume discount already covers it"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2026-03-08",
+    "quote_id": "QT-003-05",
+    "tactic_used": "volume_commitment",
+    "worked": true,
+    "original_price": 18.67,
+    "final_price": 17.08,
+    "notes": "Committed 6000 units; 8.5% off"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2026-05-08",
+    "quote_id": "QT-003-07",
+    "tactic_used": "competing_quote",
+    "worked": true,
+    "original_price": 18.79,
+    "final_price": 18.23,
+    "notes": "Matched part of a rival quote"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2026-07-06",
+    "quote_id": "QT-003-09",
+    "tactic_used": "volume_commitment",
+    "worked": true,
+    "original_price": 19.21,
+    "final_price": 17.48,
+    "notes": "Committed 8000 units; 9% off"
+  },
+  {
+    "supplier_id": "SUP-003",
+    "negotiation_date": "2026-09-03",
+    "quote_id": "QT-003-11",
+    "tactic_used": "volume_commitment",
+    "worked": true,
+    "original_price": 19.26,
+    "final_price": 17.33,
+    "notes": "Quarterly commitment of 10000 units; 10% off"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "negotiation_date": "2025-12-10",
+    "quote_id": "QT-004-02",
+    "tactic_used": "early_payment",
+    "worked": true,
+    "original_price": 36.84,
+    "final_price": 35.73,
+    "notes": "Paid in full within 5 days; 3% off"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "negotiation_date": "2026-02-08",
+    "quote_id": "QT-004-04",
+    "tactic_used": "long_term_contract",
+    "worked": false,
+    "original_price": 434.01,
+    "final_price": 434.01,
+    "notes": "Refused a price freeze; cites volatile paper prices"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "negotiation_date": "2026-04-07",
+    "quote_id": "QT-004-06",
+    "tactic_used": "early_payment",
+    "worked": true,
+    "original_price": 4.77,
+    "final_price": 4.58,
+    "notes": "Paid 100% advance; 4% off"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "negotiation_date": "2026-06-08",
+    "quote_id": "QT-004-08",
+    "tactic_used": "competing_quote",
+    "worked": false,
+    "original_price": 41.9,
+    "final_price": 41.9,
+    "notes": "Matched only 0.5%"
+  },
+  {
+    "supplier_id": "SUP-004",
+    "negotiation_date": "2026-08-07",
+    "quote_id": "QT-004-10",
+    "tactic_used": "early_payment",
+    "worked": true,
+    "original_price": 482.53,
+    "final_price": 458.4,
+    "notes": "50% advance, balance in 7 days; 5% off"
+  }
+]

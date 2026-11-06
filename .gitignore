@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.seed_loaded.json
+data/runtime_ledger.json
+.pytest_cache/
+.streamlit/secrets.toml
