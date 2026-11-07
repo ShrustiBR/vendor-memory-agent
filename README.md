@@ -1,5 +1,5 @@
 # 🧠 Vendor Memory & Negotiation Agent
-*Hack with Hyderabad 3.0 · AI Agents That Learn Using Hindsight*
+*Hack with Bangalore 4.0 · AI Agents That Learn Using Hindsight*
 
 An AI agent for procurement managers that **remembers every supplier quote, discount, delivery and negotiation outcome**,
 and uses that memory to spot price spikes and recommend the tactic that has actually worked with *that* supplier.
@@ -65,7 +65,7 @@ each logged outcome records who logged it. Set `AUTH_REQUIRED=0` to skip login l
 On hosts with an ephemeral disk (Streamlit Community Cloud) accounts are lost on restart; swap `app/auth.py` for Supabase/Auth0 for permanent accounts.
 
 ## Live demo
-_Add your Streamlit Cloud link here: https://YOUR-APP-NAME.streamlit.app_
+_Add your Streamlit Cloud link here: https://vendor-memory-agent-1.streamlit.app/
 
 ## Project structure
 ```
