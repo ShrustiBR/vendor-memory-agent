@@ -6,3 +6,4 @@ __pycache__/
 data/runtime_ledger.json
 .pytest_cache/
 .streamlit/secrets.toml
+data/users.db

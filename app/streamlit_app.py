@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
 from datetime import date, timedelta
@@ -17,6 +18,7 @@ load_dotenv(ROOT / ".env")
 import plotly.graph_objects as go  # noqa: E402
 import streamlit as st  # noqa: E402
 
+from app import auth  # noqa: E402
 from agent import analysis, ledger, llm, negotiation_agent as agent  # noqa: E402
 from agent.prompts import CANONICAL_SKUS  # noqa: E402
 from memory import hindsight_store as store, load_seed_data  # noqa: E402
@@ -37,6 +39,48 @@ ss.setdefault("last_quote", None)
 ss.setdefault("conn", None)
 ss.setdefault("sig", None)
 ss.setdefault("error", None)
+
+
+# ------------------------------------------------------------- login gate
+def auth_gate() -> None:
+    """Show Log in / Create account until the user is signed in. Set AUTH_REQUIRED=0 to skip locally."""
+    if os.getenv("AUTH_REQUIRED", "1") == "0":
+        ss.setdefault("user", {"username": "local", "full_name": "Local user"})
+    if ss.get("user"):
+        return
+    left, mid, right = st.columns([1, 2, 1])
+    with mid:
+        st.title("🧠 Vendor Memory Agent")
+        st.caption("Procurement negotiation agent that remembers every supplier. Sign in to continue.")
+        t_login, t_signup = st.tabs(["Log in", "Create account"])
+        with t_login:
+            with st.form("login_form"):
+                u = st.text_input("Username")
+                p = st.text_input("Password", type="password")
+                if st.form_submit_button("Log in", type="primary"):
+                    try:
+                        ss.user = auth.authenticate(u, p)
+                        st.rerun()
+                    except auth.AuthError as e:
+                        st.error(str(e))
+        with t_signup:
+            with st.form("signup_form"):
+                name = st.text_input("Full name (optional)")
+                u = st.text_input("Choose a username", help="3-30 letters, numbers, . - _")
+                p1 = st.text_input("Choose a password", type="password", help="At least 8 characters")
+                p2 = st.text_input("Confirm password", type="password")
+                if st.form_submit_button("Create account", type="primary"):
+                    try:
+                        if p1 != p2:
+                            raise auth.AuthError("Passwords do not match.")
+                        ss.user = auth.create_user(u, p1, name)
+                        st.rerun()
+                    except auth.AuthError as e:
+                        st.error(str(e))
+    st.stop()
+
+
+auth_gate()
 
 
 # ----------------------------------------------------------------- helpers
@@ -162,6 +206,11 @@ def price_chart(supplier_id: str, item: str, new_quote: Quote | None) -> go.Figu
 with st.sidebar:
     st.title("🧠 Vendor Memory Agent")
     st.caption("Procurement negotiation agent powered by Hindsight memory")
+    st.markdown(f"👤 Signed in as **{ss.user['full_name']}**")
+    if os.getenv("AUTH_REQUIRED", "1") != "0" and st.button("Log out"):
+        for k in list(ss.keys()):
+            del ss[k]
+        st.rerun()
     st.selectbox("Supplier", [AUTO] + list(NAMES), key="supplier_choice",
                  format_func=lambda x: x if x == AUTO else f"{NAMES[x]} ({x})")
     st.toggle("Memory ON", value=True, key="memory_on", help="OFF = generic advice (the 'before').")
@@ -171,7 +220,6 @@ with st.sidebar:
         ss.conn = store.health()
     ok, msg = ss.conn
     st.markdown(f"**Hindsight:** {'🟢' if ok else '🔴'} {msg}")
-    import os
     st.markdown(f"**Groq key:** {'🟢 set' if os.getenv('GROQ_API_KEY') else '🔴 missing'}")
     st.markdown(f"**Seed data:** {'🟢 loaded' if load_seed_data.is_loaded() else '⚪ not loaded'}")
     if st.button("Re-check connection"):
@@ -268,7 +316,9 @@ with tab_log:
             notes = st.text_input("Notes (optional)")
             if st.form_submit_button("Save to Hindsight", type="primary"):
                 with st.spinner("Retaining outcome..."):
-                    res = agent.log_outcome(q, Tactic(tactic), worked == "Yes", float(final), notes)
+                    by = f"logged by {ss.user['username']}"
+                    res = agent.log_outcome(q, Tactic(tactic), worked == "Yes", float(final),
+                                            f"{notes} ({by})" if notes else by)
                 if res["error"]:
                     st.warning(f"Saved locally, but Hindsight failed: {res['error']}")
                 else:

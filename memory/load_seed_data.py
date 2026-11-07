@@ -11,6 +11,7 @@ Usage:  python memory/load_seed_data.py [--force]
 from __future__ import annotations
 
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Callable
@@ -30,7 +31,9 @@ MARKER = ROOT / ".seed_loaded.json"
 
 
 def is_loaded() -> bool:
-    return MARKER.exists()
+    """True if seed data was loaded locally, or SEED_LOADED=1 is set (used on cloud deployments
+    where the history was already loaded into Hindsight from your own machine)."""
+    return MARKER.exists() or os.getenv("SEED_LOADED") == "1"
 
 
 def _seed_records(supplier_id: str) -> list[tuple]:

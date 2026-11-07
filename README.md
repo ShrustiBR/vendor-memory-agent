@@ -58,6 +58,15 @@ pytest -q                             # analysis tests
 ```
 Follow `demo/DEMO_SCRIPT.md` for the 3-minute story.
 
+## Accounts / login
+The app starts with a **Log in / Create account** page. Passwords are stored as salted PBKDF2 hashes in a local SQLite file
+(`data/users.db`), with a 60-second lockout after 5 wrong attempts. All users share one supplier memory (a team workspace);
+each logged outcome records who logged it. Set `AUTH_REQUIRED=0` to skip login locally.
+On hosts with an ephemeral disk (Streamlit Community Cloud) accounts are lost on restart; swap `app/auth.py` for Supabase/Auth0 for permanent accounts.
+
+## Live demo
+_Add your Streamlit Cloud link here: https://YOUR-APP-NAME.streamlit.app_
+
 ## Project structure
 ```
 data/ suppliers, quotes, discounts, deliveries, outcomes, demo_quotes (JSON)
