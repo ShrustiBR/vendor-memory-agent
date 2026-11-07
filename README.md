@@ -1,5 +1,4 @@
 # 🧠 Vendor Memory & Negotiation Agent
-*Hack with Bangalore 4.0 · AI Agents That Learn Using Hindsight*
 
 An AI agent for procurement managers that **remembers every supplier quote, discount, delivery and negotiation outcome**,
 and uses that memory to spot price spikes and recommend the tactic that has actually worked with *that* supplier.
